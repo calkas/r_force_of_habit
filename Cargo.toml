@@ -1,0 +1,7 @@
+[package]
+name = "r_force_of_habit"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+piston_window = "0.146.0"
