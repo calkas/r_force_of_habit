@@ -8,7 +8,7 @@ pub struct Planet {
 }
 
 impl Renderable for Planet {
-    fn render(&self, bodies: &Vec<Body>, context: &Context, graphics: &mut WgpuGraphics) {
+    fn render(&self, bodies: &[Body], context: &Context, graphics: &mut WgpuGraphics) {
         let r = bodies[self.body_id.0].radius;
         let (cx, cy) = (bodies[self.body_id.0].cx, bodies[self.body_id.0].cy);
 

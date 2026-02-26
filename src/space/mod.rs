@@ -5,7 +5,7 @@ pub mod world;
 use piston_window::graphics::Context;
 use piston_window::wgpu_graphics::WgpuGraphics;
 pub trait Renderable {
-    fn render(&self, bodies: &Vec<Body>, context: &Context, graphics: &mut WgpuGraphics);
+    fn render(&self, bodies: &[Body], context: &Context, graphics: &mut WgpuGraphics);
 }
 
 #[derive(Copy, Clone, Debug)]
@@ -13,6 +13,7 @@ pub struct BodyId(pub usize);
 
 /// # Body - Physics
 /// (cx, cy) - centered coords required for physics
+/// (vx, vy) - velocity
 #[derive(Clone, Debug)]
 pub struct Body {
     pub cx: f64,

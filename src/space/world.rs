@@ -29,14 +29,8 @@ impl World {
         mass: f64,
         radius: f64,
     ) -> BodyId {
-        self.bodies.push(Body {
-            cx: position[0],
-            cy: position[1],
-            vx: velocity[0],
-            vy: velocity[1],
-            mass,
-            radius,
-        });
+        self.bodies
+            .push(Body::new(position, velocity, mass, radius));
 
         BodyId(self.bodies.len() - 1)
     }
