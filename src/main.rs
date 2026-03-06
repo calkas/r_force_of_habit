@@ -14,9 +14,10 @@ fn main() {
     let mut events = Events::new(EventSettings::new().ups(60).max_fps(60));
     let mut game_world = World::new();
 
-    game_world.add_planet([200.0, 200.0], [0.0, 0.0], 10000.0, 20.0);
-    game_world.add_planet([300.0, 200.0], [0.0, 10.0], 1.0, 20.0);
-    game_world.add_planet([350.0, 200.0], [-5.0, 5.0], 1.0, 20.0);
+    game_world.add_planet([250.0, 250.0], [0.0, 0.0], 15000.0, 40.0);
+    game_world.add_planet([350.0, 250.0], [0.0, 12.0], 10.0, 20.0);
+    game_world.add_planet([400.0, 250.0], [0.0, 10.0], 1.0, 20.0);
+    game_world.add_planet([450.0, 250.0], [0.0, 8.0], 1.0, 20.0);
     //game_world.add_ship([100.0, 100.0], [0.0, 8.0], 1.0, 10.0);
     let mut mouse_coords = (0.0, 0.0);
     while let Some(e) = events.next(&mut window) {
