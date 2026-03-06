@@ -1,3 +1,4 @@
+pub mod orbit;
 pub mod planet;
 pub mod ship;
 pub mod world;
@@ -8,7 +9,7 @@ pub trait Renderable {
     fn render(&self, bodies: &[Body], context: &Context, graphics: &mut WgpuGraphics);
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, Eq, Hash, PartialEq)]
 pub struct BodyId(pub usize);
 
 /// # Body - Physics

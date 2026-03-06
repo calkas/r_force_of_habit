@@ -16,7 +16,8 @@ fn main() {
 
     game_world.add_planet([200.0, 200.0], [0.0, 0.0], 10000.0, 20.0);
     game_world.add_planet([300.0, 200.0], [0.0, 10.0], 1.0, 20.0);
-    game_world.add_ship([100.0, 100.0], [0.0, 10.0], 1.0, 10.0);
+    game_world.add_planet([350.0, 200.0], [-5.0, 5.0], 1.0, 20.0);
+    //game_world.add_ship([100.0, 100.0], [0.0, 8.0], 1.0, 10.0);
     let mut mouse_coords = (0.0, 0.0);
     while let Some(e) = events.next(&mut window) {
         e.update(|args| {
